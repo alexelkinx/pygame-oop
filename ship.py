@@ -34,14 +34,16 @@ class Ship:
                 self.bullets.remove(b)
 
         collision = pygame.sprite.groupcollide(
-            self.bullets, self.game.aliens, True, True)
+            self.bullets, self.game.aliens, True, True
+        )
 
         if collision:
             for aliens in collision.values():
                 for alien in aliens:
                     explosion = Explosion(self.game)
                     explosion.set_explosion_center_and_object(
-                        alien.rect.center, 'alien')
+                        alien.rect.center, "alien"
+                    )
                     self.game.explosions.add(explosion)
                     self.game.stats.score += 1
                     # self.game.create_alien_fleet()

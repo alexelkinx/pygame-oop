@@ -3,7 +3,6 @@ from pygame.sprite import Sprite
 
 
 class Bullet(Sprite):
-
     total_number_of_bullets = 0
 
     def __init__(self, ship, game):
@@ -11,7 +10,8 @@ class Bullet(Sprite):
         self.screen = game.screen
         self.settings = game.settings
         self.rect = pygame.Rect(
-            0, 0, game.settings.bullet_width, game.settings.bullet_height)
+            0, 0, game.settings.bullet_width, game.settings.bullet_height
+        )
         self.rect.midtop = ship.rect.midtop
         self.color = self.settings.bullet_color
         self.y = float(self.rect.y)

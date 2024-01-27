@@ -11,7 +11,7 @@ class Text:
         self.y = y
 
     def blit(self, caption, value):
-        text_string = caption + ' ' + str(value)
+        text_string = caption + " " + str(value)
         text = self.font.render(text_string, True, self.text_color)
         text_rect = text.get_rect()
         text_rect.topleft = (self.x, self.y)

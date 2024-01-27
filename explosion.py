@@ -1,5 +1,4 @@
-import pygame
-# import os.path - for mac
+import pygame  # import os.path - for Mac
 from pygame.sprite import Sprite
 
 
@@ -7,7 +6,7 @@ class Explosion(Sprite):
     def __init__(self, game):
         super().__init__()
         self.anim = {}
-        self.anim['alien'] = []
+        self.anim["alien"] = []
         # self.anim['ship'] = []
         self.last_update = pygame.time.get_ticks()
         self.frame = 0
@@ -15,10 +14,10 @@ class Explosion(Sprite):
         self.game = game
 
         for i in range(9):
-            file_name = f'regularExplosion0{i}.png'
-            image = pygame.image.load('images/' + file_name).convert_alpha()
+            file_name = f"regularExplosion0{i}.png"
+            image = pygame.image.load("images/" + file_name).convert_alpha()
             scaled_image = pygame.transform.scale(image, (60, 58))
-            self.anim['alien'].append(scaled_image)
+            self.anim["alien"].append(scaled_image)
 
     def set_explosion_center_and_object(self, center, object):
         self.object = object
