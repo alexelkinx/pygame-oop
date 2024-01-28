@@ -1,4 +1,4 @@
-import pygame  # import os.path - for Mac
+import pygame
 from pygame.sprite import Sprite
 
 

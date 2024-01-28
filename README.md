@@ -1,4 +1,4 @@
-<h2 align="center">Pygame</h2>
+## Pygame
 
 This is a small game project created using pygame.
 

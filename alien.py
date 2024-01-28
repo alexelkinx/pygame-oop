@@ -4,8 +4,8 @@ from pygame.sprite import Sprite
 
 class Alien(Sprite):
     def __init__(self, game):
-        super().__init__()
-        self.settings = game.settings
+        super().__init__()  # call parent constructor (Sprite)
+        self.settings = game.settings  #
         self.screen = game.screen
         self.screen_rect = game.screen.get_rect()
         self.image = pygame.image.load("images/alien.png").convert_alpha()

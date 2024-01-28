@@ -8,21 +8,23 @@ from stats import Stats
 
 
 class SpaceInvaders:
-    def __init__(self):
-        pygame.init()
-        self.settings = Settings()
+    def __init__(
+        self,
+    ):  # __init__() method takes the new object as its first argument, self. It is also called a constructor.
+        pygame.init()  # initializing pygame
+        self.settings = Settings()  # create object/instance settings
         self.screen = pygame.display.set_mode(
             (self.settings.screen_width, self.settings.screen_height)
-        )
-        pygame.display.set_caption(self.settings.caption)
+        )  # creating screen
+        pygame.display.set_caption(self.settings.caption)  # name of a pygame window
         self.bg_image = pygame.image.load("images/starfield.png").convert_alpha()
 
         self.ship = Ship(self)
+        self.alien = Alien(self)
         self.events = Events()
         self.stats = Stats()
-        self.alien = Alien(self)
 
-        self.aliens = pygame.sprite.Group()
+        self.aliens = pygame.sprite.Group()  # create object of class Group
         self.alien.create_alien_fleet()
 
         self.explosions = pygame.sprite.Group()
@@ -56,5 +58,5 @@ class SpaceInvaders:
 
 
 if __name__ == "__main__":
-    game = SpaceInvaders()
+    game = SpaceInvaders()  # create object/instance game
     game.run()
