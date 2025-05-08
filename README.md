@@ -1,54 +1,99 @@
-## Pygame
+# Space Invaders (OOP)
 
-This is a small game project created using pygame.
+This is a simple object-oriented 2D arcade game built with Python and Pygame. The player controls a spaceship that can move left and right and shoot bullets to destroy descending alien ships.
 
-### Dependencies
+---
 
-To run the project on a local machine, you need to have the following software installed:
+## Technologies Used
 
-* Python ver. 3.11 or higher
-* Pygame ver. 2.5.2
+- Python 3.x
+- Pygame
 
-### Installing
+---
 
-1. Open the CLI and change the current working directory to the location where you want the cloned directory.
-2. Clone the repository to your local machine:
-  ```
-  git clone https://github.com/kot-alex/pygame-oop.git
-  ```
-3. Make sure that Python is installed on your system by running the command `python --version` OR `python3 --version` for Mac. If Python is installed, it will output the version, otherwise, you'll need to install it on your system.
-4. Run `pip install -r requirements.txt` to install additional packages from the given requirements file.
+## Directory Structure
 
-### Executing program
+```
+space-invaders-oop/
+├── alien.py
+├── bullet.py
+├── events.py
+├── explosion.py
+├── images/
+│   ├── alien.png
+│   ├── regularExplosion00.png
+│   ├── ...
+│   └── starfield.png
+├── main.py
+├── README.md
+├── requirements.txt
+├── settings.py
+├── ship.py
+├── stats.py
+└── UI.py
+```
 
-1. First, open your CLI.
-2. Navigate to the project folder.
-3. Run the program by typing `python main.py`.
+---
 
-## For collaborators
+## Getting Started
 
-* Stick to lowercase for branch names and use hyphens to separate words. For instance, `feature/new-login` or `bugfix/header-styling`.
-  
-* Create **new** branches for each task. For example, if you are working on the "authorization" feature, create a `feature/auth` branch.
-  ```
-  git checkout -b feature/auth             // create a new branch based on your currently checked out (HEAD) branch
-  ```
-* Push your local repository to GitHub.
-  ```
-  git push -u origin feature/auth
-  ```
-* Periodically, changes made to `main` (if any) should be merged back into your feature branch.
-  ```
-  git checkout feature/auth                // switch to feature/auth branch
-  git merge main                           // merges changes from main into feature branch
-  ```
-* When development of the feature is complete, your should merge changes into main.
-  ```
-  git checkout main                        // switch to main branch
-  git merge feature/auth                   // merge “feature/auth” to “main”
-  ```
-* Then delete local and remote branches.
-  ```
-  git branch -d feature/auth               // deleting local branches
-  git push origin --delete feature/login   // deleting remote branches
-  ```
+### Prerequisites
+
+- Python 3.x installed on your system
+- Pip for Python package management
+
+### Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone <repository-url>
+   cd space-invaders-oop
+   ```
+
+2. Create a virtual environment:
+
+   ```bash
+   python -m venv .venv
+   ```
+
+3. Activate the virtual environment:
+
+   - On macOS and Linux:
+
+     ```bash
+     source .venv/bin/activate
+     ```
+
+   - On Windows:
+
+     ```bash
+     .venv\Scripts\activate
+     ```
+
+4. Install dependencies:
+
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+5. Run the game:
+
+   ```bash
+   python main.py
+   ```
+
+---
+
+## Gameplay
+
+- Use arrow keys to move the spaceship left and right.
+- Press spacebar to shoot bullets upward.
+- Destroy all aliens before they reach your ship.
+- Explosions are shown upon hits.
+
+---
+
+## License
+
+This project was created for educational purposes. Feel free to explore and modify it!
