@@ -1,4 +1,4 @@
-# Space Invaders (OOP)
+# Space Invaders
 
 This is a simple object-oriented 2D arcade game built with Python and Pygame. The player controls a spaceship that can move left and right and shoot bullets to destroy descending alien ships.
 
@@ -14,7 +14,7 @@ This is a simple object-oriented 2D arcade game built with Python and Pygame. Th
 ## Directory Structure
 
 ```
-space-invaders-oop/
+space-invaders/
 ├── alien.py
 ├── bullet.py
 ├── events.py
@@ -48,7 +48,7 @@ space-invaders-oop/
 
    ```bash
    git clone <repository-url>
-   cd space-invaders-oop
+   cd space-invaders
    ```
 
 2. Create a virtual environment:
@@ -91,9 +91,3 @@ space-invaders-oop/
 - Press spacebar to shoot bullets upward.
 - Destroy all aliens before they reach your ship.
 - Explosions are shown upon hits.
-
----
-
-## License
-
-This project was created for educational purposes. Feel free to explore and modify it!
